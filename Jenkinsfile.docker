@@ -6,7 +6,7 @@ pipeline {
                 git url: 'https://github.com/pps10219513/python', branch: "main"
             }
         }
-        stage('Unit Test') {
+        stage('Docker comprobando') {
                steps {
                     sh '''
                     docker  build -t tester .
