@@ -10,7 +10,8 @@ pipeline {
                steps {
                     sh '''
                     docker  build -t tester .
-		    docker run tester:latest 
+		    docker run --name test_python tester:latest 
+		    docker  rm test_python
 		    docker rmi tester
                     '''
                }
