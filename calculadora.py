@@ -6,6 +6,8 @@ class Calculadora:
     @staticmethod
     def multiplicar(a, b):
         return a * b
+    def dividir(a, b):
+        return a / b
 
 def main():
     if len(sys.argv) != 3:
