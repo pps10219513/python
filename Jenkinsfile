@@ -9,7 +9,9 @@ pipeline {
         stage('Unit Test') {
                steps {
                     sh '''
-                    python3 -m unittest discover -v
+                    docker  build -t tester .
+		    docker run tester:latest 
+		    docker rmi tester
                     '''
                }
         }
